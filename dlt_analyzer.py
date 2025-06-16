@@ -81,13 +81,13 @@ FRONT_ZONES = {'Zone1': (1, 12), 'Zone2': (13, 24), 'Zone3': (25, 35)}
 # --- 分析与执行参数配置 ---
 # --------------------------
 # 机器学习模型使用的滞后特征阶数 (e.g., 使用前1、3、5、10期的数据作为特征)
-ML_LAG_FEATURES = [1, 3, 5, 10]
+ML_LAG_FEATURES = [3, 5, 10, 20]
 # 用于生成乘积交互特征的特征对 (e.g., 前区和值 * 前区奇数个数)
 ML_INTERACTION_PAIRS = [('red_sum', 'red_odd_count')]
 # 用于生成自身平方交互特征的特征 (e.g., 前区跨度的平方)
 ML_INTERACTION_SELF = ['red_span']
 # 计算号码“近期”出现频率时所参考的期数窗口大小
-RECENT_FREQ_WINDOW = 20
+RECENT_FREQ_WINDOW = 50
 # 在分析模式下，进行策略回测时所评估的总期数
 BACKTEST_PERIODS_COUNT = 100
 # 在优化模式下，每次试验用于快速评估性能的回测期数 (数值越小优化越快)
