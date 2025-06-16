@@ -6,6 +6,10 @@ on:
     - cron: '0 22 * * 0,2,5'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   daily_process:
     runs-on: ubuntu-latest
