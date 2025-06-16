@@ -61,7 +61,7 @@ jobs:
           echo "No dlt_analysis_output_*.txt files found, or latest_report_file variable is empty. Skipping copy."
         fi
 
-    - name: Clean old reports - keep only latest 3
+    - name: Clean old reports - keep only latest 10
       run: |
         set -e
         echo "--- Cleaning old analysis reports ---"
