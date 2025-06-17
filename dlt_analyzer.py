@@ -62,8 +62,8 @@ ENABLE_OPTUNA_OPTIMIZATION = True
 # --------------------------
 # --- 策略开关配置 ---
 # --------------------------
-# 是否启用最终推荐组合层面的“反向思维”策略 (移除得分最高的几注True)
-ENABLE_FINAL_COMBO_REVERSE = False
+# 是否启用最终推荐组合层面的“反向思维”策略 (移除得分最高的几注)
+ENABLE_FINAL_COMBO_REVERSE = True
 # 在启用反向思维并移除组合后，是否从候选池中补充新的组合以达到目标数量
 ENABLE_REVERSE_REFILL = True
 
