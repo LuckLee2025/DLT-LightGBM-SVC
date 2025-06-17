@@ -162,3 +162,29 @@
 > ⚠️ 如果推送时报错 `rejected - non-fast-forward`，说明 GitHub 上已有新的提交，需要先 `git pull --rebase origin main` 合并后再推送。
 
 完成上述步骤后，即可在浏览器打开仓库地址查看已同步的代码。此后建议在每次开发完成后提交并推送，以保持本地与远程仓库同步。
+
+
+查看更改状态
+
+git status
+添加更改的文件
+
+git add 更改的文件
+# 或添加所有更改
+git add .
+提交更改
+
+git commit -m "更新说明"
+推送到GitHub
+
+git push
+常见问题解决
+如果遇到分支名称问题（如master与main）：
+
+git branch -M main  # 将当前分支重命名为main
+如果需要强制推送（谨慎使用）：
+
+git push -f origin main
+如果需要从GitHub拉取最新更改：
+
+git pull origin main

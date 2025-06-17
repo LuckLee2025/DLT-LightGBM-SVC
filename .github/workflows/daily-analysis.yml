@@ -44,6 +44,17 @@ jobs:
     - name: Run data acquisition script
       run: python dlt_data_processor.py
 
+    - name: Clean cache files to ensure fresh analysis
+      run: |
+        echo "--- Cleaning cache files ---"
+        if [ -f "daletou_processed.csv" ]; then
+          rm "daletou_processed.csv"
+          echo "Removed cache file: daletou_processed.csv"
+        else
+          echo "Cache file daletou_processed.csv not found, skipping."
+        fi
+        echo "--- Cache cleanup completed ---"
+
     - name: Run bonus calculation script
       run: python dlt_bonus_calculation.py
       
