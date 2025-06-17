@@ -62,8 +62,8 @@ ENABLE_OPTUNA_OPTIMIZATION = True
 # --------------------------
 # --- 策略开关配置 ---
 # --------------------------
-# 是否启用最终推荐组合层面的“反向思维”策略 (移除得分最高的几注)
-ENABLE_FINAL_COMBO_REVERSE = True
+# 是否启用最终推荐组合层面的“反向思维”策略 (移除得分最高的几注True)
+ENABLE_FINAL_COMBO_REVERSE = False
 # 在启用反向思维并移除组合后，是否从候选池中补充新的组合以达到目标数量
 ENABLE_REVERSE_REFILL = True
 
@@ -81,7 +81,7 @@ FRONT_ZONES = {'Zone1': (1, 12), 'Zone2': (13, 24), 'Zone3': (25, 35)}
 # --- 分析与执行参数配置 ---
 # --------------------------
 # 机器学习模型使用的滞后特征阶数 (e.g., 使用前1、3、5、10期的数据作为特征)
-ML_LAG_FEATURES = [3, 5, 10, 20]
+ML_LAG_FEATURES = [1, 3, 5, 8]
 # 用于生成乘积交互特征的特征对 (e.g., 前区和值 * 前区奇数个数)
 ML_INTERACTION_PAIRS = [('red_sum', 'red_odd_count')]
 # 用于生成自身平方交互特征的特征 (e.g., 前区跨度的平方)

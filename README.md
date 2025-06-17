@@ -174,7 +174,7 @@ git add 更改的文件
 git add .
 提交更改
 
-git commit -m "更新说明"
+git commit -m "更新工作流"
 推送到GitHub
 
 git push
